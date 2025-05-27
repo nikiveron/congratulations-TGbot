@@ -200,7 +200,7 @@ def get_holiday_etc(message, person):
     else:
         person.holiday = message.text
         markup = types.InlineKeyboardMarkup()
-        markup.row(*Btn.styleButtons)
+        markup.add(*Btn.styleButtons, row_width=1)
         bot.send_message(message.chat.id, "✨ Супер! Давай выберем стиль поздравления:", reply_markup=markup)
 
 def create_exit(message, person):
@@ -223,4 +223,4 @@ def generate_congratulation(callback, person):
 def info(message):
     on_click(message)
 
-bot.polling(none_stop=True, interval=0)
+bot.polling(none_stop=True, interval=0)  # говорит о том чтобы программа всегда выполнялась

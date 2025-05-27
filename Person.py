@@ -1,7 +1,6 @@
-
 class Person:
 
-    def __init__(self, name, age, sex, holiday, style, text_length, interests):
+    def __init__(self, name, age, sex, holiday, style, text_length, interests): #конструктор
         self.__name = name
         self.__age = age
         self.__sex = sex
@@ -10,11 +9,11 @@ class Person:
         self.__text_length = text_length
         self.__interests = interests
 
-    @property
+    @property   # свойство-геттер атрибута
     def name(self):
         return self.__name
 
-    @name.setter
+    @name.setter # свойство-сеттер атрибута
     def name(self, name):
         self.__name = name
 
@@ -66,5 +65,5 @@ class Person:
     def text_length(self, text_length):
         self.__text_length = text_length
 
-    def __del__(self):
+    def __del__(self):  #деструктор
         pass
